@@ -20,6 +20,8 @@
 '  jeep [ 11/10/2020 10:06 ]
 '      Started creating this object.
 '€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€
+Option Strict Off
+
 Imports MySql.Data.MySqlClient
 Imports ADODB
 Imports ggcAppDriver
@@ -388,7 +390,7 @@ Public Class MCApplication
     End Function
 
     Function TruncateDecimal(ByVal value As Decimal, ByVal precision As Integer) As Decimal
-        Dim stepper As Decimal = Math.Pow(10, precision)
+        Dim stepper As Decimal = CDec(Math.Pow(10, precision))
         Dim tmp As Decimal = Math.Truncate(stepper * value)
         Return tmp / stepper
     End Function
@@ -1261,6 +1263,21 @@ errProc:
                 End If
             End If
 
+            'mac 2021.02.22
+            'Set the spouse info
+            If Not IsNothing(Category.comaker_info.sLastName) Then
+                If IFNull(Category.comaker_info.sLastName) <> "" Then
+                    .CoMaker("sClientID") = ""
+
+                    .CoMaker("sLastName") = Category.comaker_info.sLastName
+                    .CoMaker("sFrstName") = Category.comaker_info.sFrstName & IIf(IFNull(Category.comaker_info.sSuffixNm) = "", "", " " & Category.comaker_info.sSuffixNm)
+                    .CoMaker("sMiddName") = Category.comaker_info.sMiddName
+                    .CoMaker("dBirthDte") = Category.comaker_info.dBirthDte
+                    .CoMaker("sBirthPlc") = Category.comaker_info.sBirthPlc
+                    .CoMaker("sTownIDxx") = "" 'todo: check if existing on GOCAS JSON
+                End If
+            End If
+
             .Term("sModelIDx") = Category.sModelIDx
             .Term("nDownPaym") = Category.nDownPaym
             .Term("nAcctTerm") = Category.nAcctTerm
@@ -1293,6 +1310,19 @@ errProc:
                                   " " & Category.spouse_info.personal_info.sMiddName
                     loFrm.txtField07.Text = Category.spouse_info.residence_info.present_address.sAddress1 & _
                                  ", " & getTownCity(Category.spouse_info.residence_info.present_address.sTownIDxx, True, True, "")
+                End If
+            End If
+
+            If Not IsNothing(Category.comaker_info.sLastName) Then
+                'Display spouse info
+                If IFNull(Category.comaker_info.sLastName) = "" Then
+                    loFrm.txtField10.Text = "N-O-N-E"
+                    loFrm.txtField11.Text = "N-O-N-E"
+                Else
+                    loFrm.txtField10.Text = Category.comaker_info.sLastName & _
+                                 ", " & Category.comaker_info.sFrstName & IIf(IFNull(Category.comaker_info.sSuffixNm) = "", "", " " & Category.comaker_info.sSuffixNm) & _
+                                  " " & Category.comaker_info.sMiddName
+                    loFrm.txtField11.Text = "" 'todo: check if existing on GOCAS JSON
                 End If
             End If
 

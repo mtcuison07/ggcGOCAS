@@ -22,6 +22,29 @@
 '€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€
 
 Public Class GOCASConst
+    Class GOCAS_Param
+        Property sBranchCd As String
+        Property dAppliedx As String
+        Property sClientNm As String
+        Property cUnitAppl As String
+        Property sUnitAppl As String
+        Property nDownPaym As String
+        Property dCreatedx As String
+        Property cApplType As String
+        Property sModelIDx As String
+        Property nAcctTerm As String
+        Property nMonAmort As String
+        Property dTargetDt As String
+        Property applicant_info As New GOCASConst.applicant_param
+        Property residence_info As New GOCASConst.client_param
+        Property means_info As New GOCASConst.means_param
+        Property other_info As New GOCASConst.other_param
+        Property comaker_info As New GOCASConst.comaker_param
+        Property spouse_info As New GOCASConst.spouse_param
+        Property spouse_means As New GOCASConst.spouse__means_param
+        Property disbursement_info As New GOCASConst.disbursement_param
+    End Class
+
     Class client_param
         Property cOwnershp As String
         Property cOwnOther As String
@@ -196,6 +219,7 @@ Public Class GOCASConst
         Property sReltnCde As String
         Property mobile_number As New List(Of mobileno_param)
         Property sFBAcctxx As String
+        Property residence_info As New client_param
     End Class
 
     Class dependent_param

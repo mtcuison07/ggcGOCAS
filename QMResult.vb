@@ -19,7 +19,13 @@
 ' ==========================================================================================
 '  jeep [ 12/05/2019 15:19 ]
 '      Started creating this object.
+'   mac [ 02/22/2021 11:03 ]
+'       Add comaker on Quick Matching
+'   mac [ 05/20/2021 09:00 ]
+'       Ihiwalay ang comaker QM sa applicant QM
 '€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€
+Option Strict Off
+
 Imports MySql.Data.MySqlClient
 Imports ADODB
 Imports ggcAppDriver
@@ -51,8 +57,11 @@ Public Class QMResult
 
     Private p_sApplicNo As String
     Private p_sApplRslt As String
-    Private p_sSpseRslt As String
+    Private p_sSpseRslt As String    
     Private p_sResltCde As String
+
+    Private p_sCoMkrRst As String
+    Private p_sCoMkrRs2 As String
 
     Private p_sClientID As String
     Private p_sLastName As String
@@ -77,6 +86,32 @@ Public Class QMResult
     Private p_sSAddress As String
     Private p_sSBrgyIDx As String
     Private p_sSTownIDx As String
+
+    'comaker 1 info
+    Private p_sCoMakrID As String
+    Private p_sCLastNme As String
+    Private p_sCFrstNme As String
+    Private p_sCMiddNme As String
+    Private p_cCGendrCd As String
+    Private p_cCCvlStat As String
+    Private p_dCBrthDte As String
+    Private p_sCBrthPlc As String
+    Private p_sCAddress As String
+    Private p_sCBrgyIDx As String
+    Private p_sCTownIDx As String
+
+    'comaker 2 info
+    Private p_sCoMkrID2 As String
+    Private p_sCLastNm2 As String
+    Private p_sCFrstNm2 As String
+    Private p_sCMiddNm2 As String
+    Private p_cCGender2 As String
+    Private p_cCCvilSt2 As String
+    Private p_dCBrthDt2 As String
+    Private p_sCBrthPl2 As String
+    Private p_sCAddres2 As String
+    Private p_sCBrgyID2 As String
+    Private p_sCTownID2 As String
 
     Private p_sModelIDx As String
     Private p_nDownPaym As Double
@@ -151,7 +186,7 @@ Public Class QMResult
             End Select
         End Get
 
-        Set(Value)
+        Set(ByVal Value As Object)
             On Error Resume Next
 
             If pbInitTran = False Then Exit Property
@@ -224,7 +259,7 @@ Public Class QMResult
             End Select
         End Get
 
-        Set(Value)
+        Set(ByVal Value As Object)
             On Error Resume Next
 
             If pbInitTran = False Then Exit Property
@@ -261,6 +296,152 @@ Public Class QMResult
         End Set
     End Property
 
+    Public Property CoMaker(ByVal Index As String) As Object
+        Get
+            On Error Resume Next
+
+            If pbInitTran = False Then
+                Return ""
+                Exit Property
+            End If
+
+            Index = LCase(Index)
+            Select Case Index
+                Case "sclientid"
+                    CoMaker = p_sCoMakrID
+                Case "slastname"
+                    CoMaker = p_sCLastNme
+                Case "sfrstname"
+                    CoMaker = p_sCFrstNme
+                Case "smiddname"
+                    CoMaker = p_sCMiddNme
+                Case "cgendercd"
+                    CoMaker = p_cCGendrCd
+                Case "ccvilstat"
+                    CoMaker = p_cCCvlStat
+                Case "dbirthdte"
+                    CoMaker = p_dCBrthDte
+                Case "sbirthplc"
+                    CoMaker = p_sCBrthPlc
+                Case "saddressx"
+                    CoMaker = p_sCAddress
+                Case "sbrgyidxx"
+                    CoMaker = p_sCBrgyIDx
+                Case "stownidxx"
+                    CoMaker = p_sCTownIDx
+            End Select
+        End Get
+
+        Set(ByVal Value As Object)
+            On Error Resume Next
+
+            If pbInitTran = False Then Exit Property
+
+            Index = LCase(Index)
+            Select Case Index
+                Case "sclientid"
+                    p_sCoMakrID = Value
+                Case "slastname"
+                    p_sCLastNme = Value
+                Case "sfrstname"
+                    p_sCFrstNme = Value
+                Case "smiddname"
+                    p_sCMiddNme = Value
+                Case "cgendercd"
+                    If Not (Value = xeLogical.YES Or Value = xeLogical.NO) Then Exit Property
+
+                    p_cCGendrCd = Value
+                Case "ccvilstat"
+                    p_cCCvlStat = Value
+                Case "dbirthdte"
+                    If Not IsDate(Value) Or CDate(Value) > Now Then Exit Property
+
+                    p_dCBrthDte = Value
+                Case "sbirthplc"
+                    p_sCBrthPlc = Value
+                Case "saddressx"
+                    p_sCAddress = Value
+                Case "sbrgyidxx"
+                    p_sCBrgyIDx = Value
+                Case "stownidxx"
+                    p_sCTownIDx = Value
+            End Select
+        End Set
+    End Property
+
+    Public Property CoMaker2(ByVal Index As String) As Object
+        Get
+            On Error Resume Next
+
+            If pbInitTran = False Then
+                Return ""
+                Exit Property
+            End If
+
+            Index = LCase(Index)
+            Select Case Index
+                Case "sclientid"
+                    CoMaker2 = p_sCoMkrID2
+                Case "slastname"
+                    CoMaker2 = p_sCLastNm2
+                Case "sfrstname"
+                    CoMaker2 = p_sCFrstNm2
+                Case "smiddname"
+                    CoMaker2 = p_sCMiddNm2
+                Case "cgendercd"
+                    CoMaker2 = p_cCGender2
+                Case "ccvilstat"
+                    CoMaker2 = p_cCCvilSt2
+                Case "dbirthdte"
+                    CoMaker2 = p_dCBrthDt2
+                Case "sbirthplc"
+                    CoMaker2 = p_sCBrthPl2
+                Case "saddressx"
+                    CoMaker2 = p_sCAddres2
+                Case "sbrgyidxx"
+                    CoMaker2 = p_sCBrgyID2
+                Case "stownidxx"
+                    CoMaker2 = p_sCTownID2
+            End Select
+        End Get
+
+        Set(ByVal Value As Object)
+            On Error Resume Next
+
+            If pbInitTran = False Then Exit Property
+
+            Index = LCase(Index)
+            Select Case Index
+                Case "sclientid"
+                    p_sCoMkrID2 = Value
+                Case "slastname"
+                    p_sCLastNm2 = Value
+                Case "sfrstname"
+                    p_sCFrstNm2 = Value
+                Case "smiddname"
+                    p_sCMiddNm2 = Value
+                Case "cgendercd"
+                    If Not (Value = xeLogical.YES Or Value = xeLogical.NO) Then Exit Property
+
+                    p_cCGender2 = Value
+                Case "ccvilstat"
+                    p_cCCvilSt2 = Value
+                Case "dbirthdte"
+                    If Not IsDate(Value) Or CDate(Value) > Now Then Exit Property
+
+                    p_dCBrthDt2 = Value
+                Case "sbirthplc"
+                    p_sCBrthPl2 = Value
+                Case "saddressx"
+                    p_sCAddres2 = Value
+                Case "sbrgyidxx"
+                    p_sCBrgyID2 = Value
+                Case "stownidxx"
+                    p_sCTownID2 = Value
+            End Select
+        End Set
+    End Property
+
     Public ReadOnly Property QuickMatchResult(ByVal Index As String) As String
         Get
             On Error Resume Next
@@ -280,6 +461,10 @@ Public Class QMResult
                     QuickMatchResult = p_sSpseRslt
                 Case "application"
                     QuickMatchResult = p_sResltCde
+                Case "comaker1"
+                    QuickMatchResult = p_sCoMkrRst
+                Case "comaker2"
+                    QuickMatchResult = p_sCoMkrRs2
             End Select
         End Get
     End Property
@@ -341,7 +526,7 @@ Public Class QMResult
             End Select
         End Get
 
-        Set(Value)
+        Set(ByVal Value As Object)
             On Error Resume Next
 
             Index = LCase(Index)
@@ -385,6 +570,7 @@ Public Class QMResult
         Dim lsOldProc As String
         Dim lsAppBList As String
         Dim lsSpsBList As String
+        Dim lsCmkBList As String
 
         lsOldProc = "QuickMatch"
         'On Error GoTo errProc
@@ -443,7 +629,6 @@ Public Class QMResult
             p_sResltCde = p_sApplRslt
         End If
 
-
         ' »»» XerSys 2012-05-09
         '  Process the other dealers result then add it to the result of our database
         If Left(lsAppBList, 1) = "P" Then
@@ -477,6 +662,43 @@ Public Class QMResult
                     p_sResltCde = p_sResltCde & Mid(lsAppBList, 2)
                 End If
         End Select
+
+        'mac 2021.02.20
+        '  match co-maker info
+        'mac 2021.05.20
+        '  revised comaker quickmatch to separate from the applicant
+        If p_sCLastNme <> "" Then
+            p_sCoMkrRst = MatchApplicant(p_sCoMakrID, p_sCLastNme, p_sCFrstNme, p_sCMiddNme, _
+                                 p_dCBrthDte, p_sCBrthPlc, p_sCTownIDx, p_sCBrgyIDx, p_sCAddress)
+
+            '  Match to blacklisted account of other dealer
+            lsCmkBList = match2Other(p_sCLastNme, p_sCFrstNme, p_sCMiddNme, _
+                                 p_dCBrthDte, p_sCTownIDx, p_sCAddress)
+
+            Select Case Left(p_sCoMkrRst, 2)
+                Case "DA", "SA", "SV", "PA"
+                    ' any result from other dealer, don't affect the result
+                    p_sCoMkrRst = p_sCoMkrRst & Mid(lsCmkBList, 2)
+                Case "CI"
+                    ' other dealers result is relevant to our result, seek help from collection department
+                    If Left(lsAppBList, 1) = "P" Then
+                        p_sCoMkrRst = "SA" & Mid(p_sCoMkrRst, 3) & Mid(lsCmkBList, 2)
+                    ElseIf Left(lsAppBList, 1) = "U" Then
+                        p_sCoMkrRst = "SV" & Mid(p_sCoMkrRst, 3) & Mid(lsCmkBList, 2)
+                    End If
+                Case "AP"
+                    If Left(lsAppBList, 1) = "P" Then
+                        ' approve customer means repeat customer, follow the latest result
+                        If CInt(Mid(lsCmkBList, 2)) > CInt(Mid(p_sCoMkrRst, 7, 2)) Then
+                            p_sCoMkrRst = "SA" & Mid(p_sCoMkrRst, 3) & Mid(lsCmkBList, 2)
+                        Else
+                            p_sCoMkrRst = p_sCoMkrRst & Mid(lsCmkBList, 2)
+                        End If
+                    ElseIf Left(lsAppBList, 1) = "U" Then
+                        p_sCoMkrRst = p_sCoMkrRst & Mid(lsCmkBList, 2)
+                    End If
+            End Select
+        End If
 
         ' save the retrieve result
         If Not saveResult() Then
@@ -629,6 +851,8 @@ Public Class QMResult
                 Return lsResult
             End If
 
+            If Not IsDate(ldBirthDte) Then ldBirthDte = "1900-01-01"
+
             For lnRow = 0 To .Rows.Count - 1
                 If compareName(.Rows(lnRow)("sLastName"), lsLastName) = False Then GoTo moveToNext
 
@@ -722,8 +946,11 @@ Public Class QMResult
                                                        p_nDownPaym, _
                                                        lnRecExist)
                                     Else
+                                        Debug.Print(.Rows(lnRow)("sAcctNmbr"))
+                                        'mac 2021.06.17
+                                        '   set null date to 1900-01-01
                                         lsResult = prcRepeatAccount(.Rows(lnRow)("cTranStat"), _
-                                                       .Rows(lnRow)("dClosedxx"), _
+                                                       IFNull(.Rows(lnRow)("dClosedxx"), CDate("1900-01-01")), _
                                                        .Rows(lnRow)("nAcctTerm"), _
                                                        lsRating, _
                                                        p_sModelIDx, _
@@ -769,7 +996,6 @@ Public Class QMResult
                 'Debug.Print(lnRow & " " & .Rows(lnRow)("sClientID") & " " & lsResult)
 
 moveToNext:
-                'lnRow = lnRow + 1
             Next
         End With
 
@@ -827,8 +1053,8 @@ moveToNext:
                     ", a.sMiddName" & _
                     ", a.sAddressx" & _
                     ", IFNULL(a.sTownIDxx, '') sTownIDxx" & _
-                    ", a.sProvIDxx" & _
-                    ", c.sProvIDxx xProvIDxx" & _
+                    ", IFNULL(a.sProvIDxx, '') sProvIDxx" & _
+                    ", ifnull(c.sProvIDxx, '') xProvIDxx" & _
                     ", a.dBirthDte" & _
                     ", a.nBListdYr" & _
                  " FROM Client_Blacklist a" & _
@@ -845,6 +1071,8 @@ moveToNext:
         With loRS
             Debug.Print(lsSQL)
             If .Rows.Count = 0 Then Return ""
+
+            If Not IsDate(ldBirthDte) Then ldBirthDte = "1900-01-01"
 
             For lnRow = 0 To loRS.Rows.Count - 1
                 If compareName(.Rows(lnRow)("sLastName"), lsLastName) = False Then GoTo moveToNext
@@ -1010,7 +1238,6 @@ moveToNext:
         With p_oTmpRst
             dtRow = .Select("sResltCde = " & strParm(lsResltCde) & " AND nRelevnce = " & lnRelevnce)
 
-
             If UBound(dtRow) = -1 Then
                 lcAddRecord = xeLogical.YES
             Else
@@ -1059,6 +1286,14 @@ moveToNext:
             lnCtr = 0
             For lnRow = 0 To dtResult.Rows.Count - 1
                 If dtResult.Rows(lnRow)("cAddRecrd") = xeLogical.YES Then
+                    Debug.Print(lsTransNox)
+                    Debug.Print(dtResult.Rows(lnRow)("sClientID"))
+                    Debug.Print(lnCtr + 1)
+                    Debug.Print(dtResult.Rows(lnRow)("sResltCde"))
+                    Debug.Print(dtResult.Rows(lnRow)("sAcctNmbr"))
+                    Debug.Print(dtResult.Rows(lnRow)("sMCSONmbr"))
+                    Debug.Print(dtResult.Rows(lnRow)("sApplNmbr"))
+                    Debug.Print(p_oAppDrivr.SysDate)
                     lsSQL = "INSERT INTO MC_LR_QuickMatch_Result SET" & _
                                 "  sTransNox = " & strParm(lsTransNox) & _
                                 ", sClientID = " & strParm(dtResult.Rows(lnRow)("sClientID")) & _
@@ -1101,7 +1336,48 @@ moveToNext:
 
             lsSQL = lsSQL & _
                         ", sSBrthPlc = " & strParm(p_sSBrthPlc) & _
-                        ", sSTownIDx = " & strParm(p_sSTownIDx) & _
+                        ", sSTownIDx = " & strParm(p_sSTownIDx)
+
+            'mac 2021.04.10
+            '   save comaker info
+            lsSQL = lsSQL & _
+                        ", sCLastNme = " & strParm(p_sCLastNme) & _
+                        ", sCFrstNme = " & strParm(p_sCFrstNme) & _
+                        ", sCMiddNme = " & strParm(p_sCMiddNme)
+
+            If p_dCBrthDte = "" Then
+                lsSQL = lsSQL & ", dCBrthDte = NULL"
+            Else
+                lsSQL = lsSQL & ", dCBrthDte = " & dateParm(p_dCBrthDte)
+            End If
+
+            lsSQL = lsSQL & _
+                        ", sCBrthPlc = " & strParm(p_sCBrthPlc) & _
+                        ", sCTownIDx = " & strParm(p_sCTownIDx) & _
+                        ", sCoMkrRs1 = " & strParm(p_sCoMkrRst)
+
+            'end - save comaker info
+
+            'mac 2021.05.20
+            '   save comaker 2 info
+            'lsSQL = lsSQL & _
+            '            ", sCLastNm2 = " & strParm(p_sCLastNm2) & _
+            '            ", sCFrstNm2 = " & strParm(p_sCFrstNm2) & _
+            '            ", sCMiddNm2 = " & strParm(p_sCMiddNm2)
+
+            'If p_dCBrthDte = "" Then
+            '    lsSQL = lsSQL & ", dCBrthDt2 = NULL"
+            'Else
+            '    lsSQL = lsSQL & ", dCBrthDt2 = " & dateParm(p_dCBrthDt2)
+            'End If
+
+            'lsSQL = lsSQL & _
+            '            ", sCBrthPl2 = " & strParm(p_sCBrthPl2) & _
+            '            ", sCTownID2 = " & strParm(p_sCTownID2) & _
+            '            ", sCoMkrRs2 = " & strParm(p_sCoMkrRs2)
+            'end - save comaker 2 info
+
+            lsSQL = lsSQL & _
                         ", sModelIDx = " & strParm(p_sModelIDx) & _
                         ", nDownPaym = " & p_nDownPaym & _
                         ", nAcctTerm = " & p_nAcctTerm & _

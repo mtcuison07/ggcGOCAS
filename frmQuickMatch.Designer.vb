@@ -23,6 +23,21 @@ Partial Class frmQuickMatch
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.txtField15 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtField14 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtField13 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.txtField12 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtField11 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtField10 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.dgv1 = New System.Windows.Forms.DataGridView()
         Me.colField00 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colField01 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,6 +48,8 @@ Partial Class frmQuickMatch
         Me.txtField00 = New System.Windows.Forms.TextBox()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtField09 = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.txtField08 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -49,9 +66,10 @@ Partial Class frmQuickMatch
         Me.txtSeeks00 = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.cmdButton00 = New System.Windows.Forms.Button()
-        Me.txtField09 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -61,6 +79,7 @@ Partial Class frmQuickMatch
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.dgv1)
         Me.Panel1.Controls.Add(Me.txtField00)
         Me.Panel1.Controls.Add(Me.Label40)
@@ -68,8 +87,183 @@ Partial Class frmQuickMatch
         Me.Panel1.Controls.Add(Me.txtSeeks00)
         Me.Panel1.Location = New System.Drawing.Point(2, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(605, 357)
+        Me.Panel1.Size = New System.Drawing.Size(605, 515)
         Me.Panel1.TabIndex = 0
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Panel5)
+        Me.GroupBox2.Controls.Add(Me.txtField14)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.txtField13)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.Panel4)
+        Me.GroupBox2.Controls.Add(Me.txtField11)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.txtField10)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Location = New System.Drawing.Point(5, 191)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(595, 159)
+        Me.GroupBox2.TabIndex = 128
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Co-Maker Info"
+        '
+        'Panel5
+        '
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Controls.Add(Me.txtField15)
+        Me.Panel5.Controls.Add(Me.Label10)
+        Me.Panel5.Location = New System.Drawing.Point(343, 89)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(246, 64)
+        Me.Panel5.TabIndex = 137
+        '
+        'txtField15
+        '
+        Me.txtField15.BackColor = System.Drawing.SystemColors.Window
+        Me.txtField15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtField15.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtField15.Location = New System.Drawing.Point(5, 27)
+        Me.txtField15.Multiline = True
+        Me.txtField15.Name = "txtField15"
+        Me.txtField15.ReadOnly = True
+        Me.txtField15.Size = New System.Drawing.Size(236, 30)
+        Me.txtField15.TabIndex = 118
+        Me.txtField15.TabStop = False
+        Me.txtField15.Text = "N-O-N-E"
+        Me.txtField15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(59, 3)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(128, 20)
+        Me.Label10.TabIndex = 117
+        Me.Label10.Text = "Co-Maker2 QM"
+        '
+        'txtField14
+        '
+        Me.txtField14.BackColor = System.Drawing.SystemColors.Window
+        Me.txtField14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtField14.Location = New System.Drawing.Point(91, 112)
+        Me.txtField14.Multiline = True
+        Me.txtField14.Name = "txtField14"
+        Me.txtField14.ReadOnly = True
+        Me.txtField14.Size = New System.Drawing.Size(243, 41)
+        Me.txtField14.TabIndex = 136
+        Me.txtField14.TabStop = False
+        Me.txtField14.Text = "N-O-N-E"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(14, 115)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 13)
+        Me.Label8.TabIndex = 135
+        Me.Label8.Text = "Address:"
+        '
+        'txtField13
+        '
+        Me.txtField13.BackColor = System.Drawing.SystemColors.Window
+        Me.txtField13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtField13.Location = New System.Drawing.Point(91, 89)
+        Me.txtField13.Name = "txtField13"
+        Me.txtField13.ReadOnly = True
+        Me.txtField13.Size = New System.Drawing.Size(243, 20)
+        Me.txtField13.TabIndex = 134
+        Me.txtField13.TabStop = False
+        Me.txtField13.Text = "N-O-N-E"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(14, 92)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(65, 13)
+        Me.Label9.TabIndex = 133
+        Me.Label9.Text = "Co-Maker 2:"
+        '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.txtField12)
+        Me.Panel4.Controls.Add(Me.Label7)
+        Me.Panel4.Location = New System.Drawing.Point(343, 19)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(246, 64)
+        Me.Panel4.TabIndex = 132
+        '
+        'txtField12
+        '
+        Me.txtField12.BackColor = System.Drawing.SystemColors.Window
+        Me.txtField12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtField12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtField12.Location = New System.Drawing.Point(5, 27)
+        Me.txtField12.Multiline = True
+        Me.txtField12.Name = "txtField12"
+        Me.txtField12.ReadOnly = True
+        Me.txtField12.Size = New System.Drawing.Size(236, 30)
+        Me.txtField12.TabIndex = 118
+        Me.txtField12.TabStop = False
+        Me.txtField12.Text = "N-O-N-E"
+        Me.txtField12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(59, 3)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(128, 20)
+        Me.Label7.TabIndex = 117
+        Me.Label7.Text = "Co-Maker1 QM"
+        '
+        'txtField11
+        '
+        Me.txtField11.BackColor = System.Drawing.SystemColors.Window
+        Me.txtField11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtField11.Location = New System.Drawing.Point(91, 42)
+        Me.txtField11.Multiline = True
+        Me.txtField11.Name = "txtField11"
+        Me.txtField11.ReadOnly = True
+        Me.txtField11.Size = New System.Drawing.Size(243, 41)
+        Me.txtField11.TabIndex = 131
+        Me.txtField11.TabStop = False
+        Me.txtField11.Text = "N-O-N-E"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(14, 45)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(48, 13)
+        Me.Label5.TabIndex = 130
+        Me.Label5.Text = "Address:"
+        '
+        'txtField10
+        '
+        Me.txtField10.BackColor = System.Drawing.SystemColors.Window
+        Me.txtField10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtField10.Location = New System.Drawing.Point(91, 19)
+        Me.txtField10.Name = "txtField10"
+        Me.txtField10.ReadOnly = True
+        Me.txtField10.Size = New System.Drawing.Size(243, 20)
+        Me.txtField10.TabIndex = 129
+        Me.txtField10.TabStop = False
+        Me.txtField10.Text = "N-O-N-E"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(14, 22)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(65, 13)
+        Me.Label6.TabIndex = 128
+        Me.Label6.Text = "Co-Maker 1:"
         '
         'dgv1
         '
@@ -77,7 +271,7 @@ Partial Class frmQuickMatch
         Me.dgv1.AllowUserToDeleteRows = False
         Me.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colField00, Me.colField01, Me.colField02, Me.colField03, Me.colField04, Me.colField05})
-        Me.dgv1.Location = New System.Drawing.Point(3, 197)
+        Me.dgv1.Location = New System.Drawing.Point(3, 352)
         Me.dgv1.Name = "dgv1"
         Me.dgv1.ReadOnly = True
         Me.dgv1.Size = New System.Drawing.Size(597, 158)
@@ -159,17 +353,37 @@ Partial Class frmQuickMatch
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(5, 36)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(595, 154)
+        Me.GroupBox1.Size = New System.Drawing.Size(595, 151)
         Me.GroupBox1.TabIndex = 107
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Applicant Info"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(341, 39)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(79, 13)
+        Me.Label4.TabIndex = 119
+        Me.Label4.Text = "Application No:"
+        '
+        'txtField09
+        '
+        Me.txtField09.BackColor = System.Drawing.SystemColors.Window
+        Me.txtField09.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtField09.Location = New System.Drawing.Point(431, 36)
+        Me.txtField09.Name = "txtField09"
+        Me.txtField09.ReadOnly = True
+        Me.txtField09.Size = New System.Drawing.Size(158, 20)
+        Me.txtField09.TabIndex = 118
+        Me.txtField09.TabStop = False
         '
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.txtField08)
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Location = New System.Drawing.Point(343, 62)
+        Me.Panel3.Location = New System.Drawing.Point(343, 61)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(246, 84)
         Me.Panel3.TabIndex = 117
@@ -179,7 +393,7 @@ Partial Class frmQuickMatch
         Me.txtField08.BackColor = System.Drawing.SystemColors.Window
         Me.txtField08.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtField08.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtField08.Location = New System.Drawing.Point(5, 42)
+        Me.txtField08.Location = New System.Drawing.Point(5, 41)
         Me.txtField08.Multiline = True
         Me.txtField08.Name = "txtField08"
         Me.txtField08.ReadOnly = True
@@ -195,9 +409,9 @@ Partial Class frmQuickMatch
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(39, 5)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(151, 31)
+        Me.Label3.Size = New System.Drawing.Size(176, 31)
         Me.Label3.TabIndex = 116
-        Me.Label3.Text = "QM Result"
+        Me.Label3.Text = "Quick Match"
         '
         'txtField07
         '
@@ -322,7 +536,7 @@ Partial Class frmQuickMatch
         Me.Panel2.Controls.Add(Me.cmdButton00)
         Me.Panel2.Location = New System.Drawing.Point(611, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(94, 357)
+        Me.Panel2.Size = New System.Drawing.Size(94, 515)
         Me.Panel2.TabIndex = 1
         '
         'cmdButton00
@@ -334,31 +548,11 @@ Partial Class frmQuickMatch
         Me.cmdButton00.Text = "Ok"
         Me.cmdButton00.UseVisualStyleBackColor = True
         '
-        'txtField09
-        '
-        Me.txtField09.BackColor = System.Drawing.SystemColors.Window
-        Me.txtField09.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtField09.Location = New System.Drawing.Point(431, 36)
-        Me.txtField09.Name = "txtField09"
-        Me.txtField09.ReadOnly = True
-        Me.txtField09.Size = New System.Drawing.Size(158, 20)
-        Me.txtField09.TabIndex = 118
-        Me.txtField09.TabStop = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(341, 39)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(79, 13)
-        Me.Label4.TabIndex = 119
-        Me.Label4.Text = "Application No:"
-        '
         'frmQuickMatch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(708, 361)
+        Me.ClientSize = New System.Drawing.Size(708, 521)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -368,6 +562,12 @@ Partial Class frmQuickMatch
         Me.Text = "QM Result"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         CType(Me.dgv1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -406,4 +606,19 @@ Partial Class frmQuickMatch
     Friend WithEvents txtField08 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtField09 As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtField11 As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txtField10 As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtField12 As System.Windows.Forms.TextBox
+    Friend WithEvents txtField14 As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtField13 As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents txtField15 As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

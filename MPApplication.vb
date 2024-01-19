@@ -20,6 +20,8 @@
 '  jeep [ 11/10/2020 10:06 ]
 '      Started creating this object.
 '€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€
+Option Strict Off
+
 Imports MySql.Data.MySqlClient
 Imports ADODB
 Imports ggcAppDriver
@@ -542,7 +544,8 @@ Public Class MPApplication
                     "  sModelIDx" & _
                     ", sModelNme" & _
                 " FROM CP_Model" & _
-                " WHERE cRecdStat = " & strParm(xeLogical.YES)
+                " WHERE cRecdStat = " & strParm(xeLogical.YES) & _
+                " AND cKnoxGrdx = " & strParm(xeLogical.YES)
     End Function
 
     Private Function getSQL_Occupation() As String
@@ -1069,6 +1072,8 @@ errProc:
                     ", sVerified = " & strParm(p_oApp.UserID) & _
                     ", dVerified = " & dateParm(p_oApp.getSysDate()) & _
                     ", cTranStat = " & strParm(xeTranStat.TRANS_CLOSED) & _
+                    ", sBranchCd = " & "'" & (p_oDTMstr.Rows(0)("sBranchCd")) & "'" & _
+                    ", sQMatchNo = " & "'" & (p_oDTMstr.Rows(0)("sQMatchNo")) & "'" & _
                 " WHERE sTransNox = " & strParm(p_oDTMstr(0)("sTransNox"))
 
         If p_oApp.Execute(lsSQL, "Credit_Online_Application", p_sBranchCd) = 0 Then
@@ -1132,11 +1137,12 @@ errProc:
                         ", dCreatedx = " & dateParm(p_oApp.getSysDate()) & _
                         ", cWithCIxx = " & strParm(xeTranStat.TRANS_CLOSED) & _
                         ", cTranStat = " & strParm(xeTranStat.TRANS_OPEN) & _
-                        ", cDivision = " & strParm("2") & _
+                        ", cDivision = " & strParm("1") & _
                         ", cEvaluatr = " & strParm("0") & _
                         ", dModified = " & dateParm(p_oApp.getSysDate()) & _
                     " ON DUPLICATE KEY UPDATE" & _
                         "  sBranchCd = " & strParm(p_oDTMstr(0).Item("sBranchCd")) & _
+                        ", cTranStat = " & strParm(xeTranStat.TRANS_CLOSED) & _
                         ", sCatInfox = " & "'" & (JSONObjCategory()) & "'"
             Debug.Print(lsSQL)
             If lsSQL <> "" Then
@@ -1662,7 +1668,7 @@ errProc:
                 .self_employed.sBusTownx = If(fsJSONValue = "", jsonObjDet.sBusiAddr, loJSONObject.means_info.self_employed.sBusTownx)
                 .self_employed.cBusTypex = ""
                 .self_employed.nBusLenxx = If(fsJSONValue = "", jsonObjDet.sYrInBusi, loJSONObject.means_info.self_employed.nBusLenxx)
-                .self_employed.nBusIncom = If(fsJSONValue = "", jsonObjDet.sBusIncom, loJSONObject.means_info.self_employed.nBusIncom)
+                .self_employed.nBusIncom = If(fsJSONValue = "", 0, loJSONObject.means_info.self_employed.nBusIncom)
                 .self_employed.nMonExpns = 0
                 .self_employed.cOwnTypex = ""
                 .self_employed.cOwnSizex = ""
@@ -1678,7 +1684,7 @@ errProc:
                 .financed.sEmailAdd = ""
 
                 .other_income.sOthrIncm = If(fsJSONValue = "", jsonObjDet.sSourceIn, loJSONObject.means_info.other_income.sOthrIncm)
-                .other_income.nOthrIncm = ""
+                .other_income.nOthrIncm = 0
             End With
 
             With .other_info
@@ -1892,8 +1898,8 @@ errProc:
                 .self_employed.sBusTownx = If(fsJSONValue = "", jsonObjDet.sSpBusiAd, loJSONObject.spouse_means.self_employed.sBusTownx)
                 .self_employed.cBusTypex = ""
                 .self_employed.nBusLenxx = If(fsJSONValue = "", jsonObjDet.sSpYrsBus, loJSONObject.spouse_means.self_employed.nBusLenxx)
-                .self_employed.nBusIncom = If(fsJSONValue = "", jsonObjDet.sSpBusInc, loJSONObject.spouse_means.self_employed.nBusIncom)
-                .self_employed.nMonExpns = ""
+                .self_employed.nBusIncom = If(fsJSONValue = "", 0, loJSONObject.spouse_means.self_employed.nBusIncom)
+                .self_employed.nMonExpns = 0
                 .self_employed.cOwnTypex = ""
                 .self_employed.cOwnSizex = ""
 
@@ -1910,7 +1916,7 @@ errProc:
                 .financed.sEmailAdd = ""
                 
                 .other_income.sOthrIncm = If(fsJSONValue = "", jsonObjDet.sSpSrcInc, loJSONObject.spouse_means.other_income.sOthrIncm)
-                .other_income.nOthrIncm = ""
+                .other_income.nOthrIncm = 0
             End With
             
 
@@ -1971,8 +1977,8 @@ errProc:
 
                 .monthly_expenses.nElctrcBl = If(fsJSONValue = "", jsonObjDet.sElectric, loJSONObject.disbursement_info.monthly_expenses.nElctrcBl)
                 .monthly_expenses.nWaterBil = If(fsJSONValue = "", jsonObjDet.sWaterBil, loJSONObject.disbursement_info.monthly_expenses.nWaterBil)
-                .monthly_expenses.nFoodAllw = ""
-                .monthly_expenses.nLoanAmtx = ""
+                .monthly_expenses.nFoodAllw = 0
+                .monthly_expenses.nLoanAmtx = 0
                 .bank_account.sBankName = If(fsJSONValue = "", "", loJSONObject.disbursement_info.bank_account.sBankName)
                 .bank_account.sAcctType = If(fsJSONValue = "", "", loJSONObject.disbursement_info.bank_account.sAcctType)
                 .credit_card.sBankName = If(fsJSONValue = "", jsonObjDet.sCredtCrd, loJSONObject.disbursement_info.credit_card.sBankName)

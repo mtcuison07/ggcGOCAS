@@ -20,7 +20,8 @@
 '  jeep [ 12/05/2019 15:19 ]
 '      Started creating this object.
 '€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€
-
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
 Public Class CARConst
     Class client_param
         Property cOwnershp As String

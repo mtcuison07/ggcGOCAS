@@ -20,6 +20,8 @@
 '  jep [ 11/45/2020 11:45 ]
 '      Started creating this object.
 '€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€
+Option Strict Off
+
 Imports MySql.Data.MySqlClient
 Imports ADODB
 Imports ggcAppDriver
@@ -154,6 +156,8 @@ Public Class CARApplication
 
         jsonObjDet = New GOCAS_Param
 
+        Debug.Print(JSONObjDetail())
+
         p_nEditMode = xeEditMode.MODE_ADDNEW
 
         Return True
@@ -173,35 +177,47 @@ Public Class CARApplication
     Public Function SaveTransaction() As Boolean
         Dim lsSQL As String = ""
         Try
+            Dim lsResultPath As String = "D:\GGC_Java_Systems\temp\car.tmp"
+            System.IO.File.WriteAllText(lsResultPath, JSONObjDetail())
 
-            If p_nEditMode = xeEditMode.MODE_ADDNEW Then p_oDTMstr(0).Item("sTransNox") = GetNextCode(p_sMasTable, "sTransNox", True, p_oApp.Connection, True, p_sBranchCd)
+            Dim lnResult As Integer
 
-            lsSQL = "INSERT INTO Credit_Online_Application SET" & _
-                        "  sTransNox = " & strParm(p_oDTMstr(0).Item("sTransNox")) & _
-                        ", sBranchCd = " & strParm(p_oDTMstr(0).Item("sBranchCd")) & _
-                        ", dTransact = " & dateParm(p_oDTMstr(0).Item("dTransact")) & _
-                        ", sClientNm = " & strParm(Detail.applicant_info.sLastName & ", " & Detail.applicant_info.sFrstName & " " & Detail.applicant_info.sMiddName) & _
-                        ", sSourceCD = " & strParm(p_oDTMstr(0).Item("sSourceCd")) & _
-                        ", sDetlInfo = " & "'" & (JSONObjDetail()) & "'" & _
-                        ", nDownPaym = " & strParm(p_oDTMstr(0).Item("nDownPaym")) & _
-                        ", sCreatedx = " & strParm(p_oApp.UserID) & _
-                        ", dCreatedx = " & dateParm(p_oApp.getSysDate()) & _
-                        ", cWithCIxx = " & strParm(xeTranStat.TRANS_CLOSED) & _
-                        ", cTranStat = " & strParm(xeTranStat.TRANS_OPEN) & _
-                        ", cDivision = " & strParm("2") & _
-                        ", cEvaluatr = " & strParm("0") & _
-                        ", dModified = " & dateParm(p_oApp.getSysDate()) & _
-                    " ON DUPLICATE KEY UPDATE" & _
-                        "  sBranchCd = " & strParm(p_oDTMstr(0).Item("sBranchCd")) & _
-                        ", sDetlInfo = " & "'" & (JSONObjDetail()) & "'"
-            Debug.Print(lsSQL)
-            If lsSQL <> "" Then
-                p_oApp.Execute(lsSQL, p_sMasTable)
+            If p_nEditMode = xeEditMode.MODE_ADDNEW Then
+                lnResult = RMJExecute("D:\GGC_Java_Systems\", "gocas-car.bat", p_oApp.UserID & " " & "0")
+            Else
+                lnResult = RMJExecute("D:\GGC_Java_Systems\", "gocas-car.bat", p_oApp.UserID & " " & p_oDTMstr(0).Item("sTransNox"))
             End If
+
+            'If p_nEditMode = xeEditMode.MODE_ADDNEW Then p_oDTMstr(0).Item("sTransNox") = GetNextCode(p_sMasTable, "sTransNox", True, p_oApp.Connection, True, p_sBranchCd)
+
+            'Debug.Print(JSONObjDetail())
+            'lsSQL = "INSERT INTO Credit_Online_Application SET" & _
+            '            "  sTransNox = " & strParm(p_oDTMstr(0).Item("sTransNox")) & _
+            '            ", sBranchCd = " & strParm(p_oDTMstr(0).Item("sBranchCd")) & _
+            '            ", dTransact = " & dateParm(p_oDTMstr(0).Item("dTransact")) & _
+            '            ", sClientNm = " & strParm(Detail.applicant_info.sLastName & ", " & Detail.applicant_info.sFrstName & " " & Detail.applicant_info.sMiddName) & _
+            '            ", sSourceCD = " & strParm(p_oDTMstr(0).Item("sSourceCd")) & _
+            '            ", sDetlInfo = " & "'" & (JSONObjDetail()) & "'" & _
+            '            ", nDownPaym = " & strParm(p_oDTMstr(0).Item("nDownPaym")) & _
+            '            ", sCreatedx = " & strParm(p_oApp.UserID) & _
+            '            ", dCreatedx = " & dateParm(p_oApp.getSysDate()) & _
+            '            ", cWithCIxx = " & strParm(xeTranStat.TRANS_CLOSED) & _
+            '            ", cTranStat = " & strParm(xeTranStat.TRANS_OPEN) & _
+            '            ", cDivision = " & strParm("2") & _
+            '            ", cEvaluatr = " & strParm("0") & _
+            '            ", dModified = " & dateParm(p_oApp.getSysDate()) & _
+            '        " ON DUPLICATE KEY UPDATE" & _
+            '            "  sBranchCd = " & strParm(p_oDTMstr(0).Item("sBranchCd")) & _
+            '            ", sDetlInfo = " & "'" & (JSONObjDetail()) & "'"
+            'Debug.Print(lsSQL)
+            'If lsSQL <> "" Then
+            '    p_oApp.Execute(lsSQL, p_sMasTable)
+            'End If
 
             p_nEditMode = xeEditMode.MODE_READY
 
-            Return True
+            Return IIf(lnResult = 0, True, False)
+
         Catch ex As Exception
             If p_sParent = "" Then p_oApp.RollBackTransaction()
             MsgBox(ex.Message)
@@ -980,11 +996,10 @@ errProc:
     Function confirmTransaction() As Boolean
         Dim lsSQL As String
 
-        lsSQL = "UPDATE Credit_Online_Application SET" & _
-                    "  sDetlInfo = " & "'" & (JSONObjDetail()) & "'" & _
-                    ", cTranStat = " & strParm(1) & _
-                    ", sConfirmd = " & strParm(p_oApp.UserID) & _
-                    ", dConfirmd = " & dateParm(p_oApp.getSysDate) & _
+        lsSQL = "UPDATE Credit_Online_Application SET" &
+                    " cTranStat = " & strParm(1) &
+                    ", sConfirmd = " & strParm(p_oApp.UserID) &
+                    ", dConfirmd = " & dateParm(p_oApp.getSysDate) &
                 " WHERE sTransNox = " & strParm(p_oDTMstr(0)("sTransNox"))
 
         If p_oApp.Execute(lsSQL, "Credit_Online_Application", p_sBranchCd) = 0 Then
@@ -1191,8 +1206,10 @@ errProc:
     Function JSONObjDetail() As String
         Dim loSettings As New JsonSerializerSettings
 
-        loSettings.NullValueHandling = NullValueHandling.Ignore
-        loSettings.DefaultValueHandling = DefaultValueHandling.Ignore
+        'loSettings.NullValueHandling = NullValueHandling.Ignore
+        'loSettings.DefaultValueHandling = DefaultValueHandling.Ignore
+        loSettings.NullValueHandling = NullValueHandling.Include
+        loSettings.DefaultValueHandling = DefaultValueHandling.Include
 
         Return JsonConvert.SerializeObject(jsonObjDet, loSettings)
     End Function
@@ -1582,6 +1599,7 @@ errProc:
     End Sub
 
     Class GOCAS_Param
+        <JsonProperty(NullValueHandling:=NullValueHandling.Ignore)>
         Property sBranchCd As String
         Property dAppliedx As String
         Property sClientNm As String

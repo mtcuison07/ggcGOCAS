@@ -1,4 +1,6 @@
-﻿Imports ggcAppDriver
+﻿Option Strict Off
+
+Imports ggcAppDriver
 Imports System.Windows.Forms
 
 Public Class frmQuickMatch
