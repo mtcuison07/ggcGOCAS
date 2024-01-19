@@ -1,0 +1,119 @@
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.dll
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.pdb
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.xml
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.dll
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\MySql.Data.dll
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\Newtonsoft.Json.dll
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\PayPalCoreSDK.dll
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.pdb
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.xml
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\Newtonsoft.Json.xml
+D:\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.dll
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.dll
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.pdb
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.xml
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.dll
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\Newtonsoft.Json.dll
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\PayPalCoreSDK.dll
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.pdb
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.xml
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\Newtonsoft.Json.xml
+Z:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+Z:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+Z:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+Z:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.Cache
+Z:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
+Z:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
+Z:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
+Z:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbprojResolveAssemblyReference.cache
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.pdb
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.xml
+Z:\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.exe
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.dll
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.pdb
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.xml
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.dll
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\Newtonsoft.Json.dll
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\PayPalCoreSDK.dll
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.dll
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.pdb
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.xml
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\Newtonsoft.Json.xml
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.pdb
+\\192.168.10.12\d\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.xml
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.dll
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.pdb
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcGOCAS.xml
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.dll
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\Newtonsoft.Json.dll
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\PayPalCoreSDK.dll
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.dll
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.pdb
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\ggcAppDriver.xml
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.pdb
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\rmjGOCAS.xml
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\bin\Debug\Newtonsoft.Json.xml
+D:\GGC_Systems\vb.net\ggcGOCAS.dll
+D:\GGC_Systems\vb.net\ggcGOCAS.pdb
+D:\GGC_Systems\vb.net\ggcGOCAS.xml
+D:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbprojResolveAssemblyReference.cache
+D:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+D:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+D:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+D:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.Cache
+D:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
+D:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
+D:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
+X:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbprojResolveAssemblyReference.cache
+X:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+X:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+X:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+X:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.Cache
+X:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
+X:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
+X:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbprojResolveAssemblyReference.cache
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.Cache
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
+Y:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
+Y:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbprojResolveAssemblyReference.cache
+Y:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+Y:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+Y:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+Y:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.Cache
+Y:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
+Y:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
+Y:\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
+\\fs2\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbprojResolveAssemblyReference.cache
+\\fs2\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.Cache
+\\fs2\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
+\\fs2\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
+\\fs2\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
+\\192.168.10.221\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbprojResolveAssemblyReference.cache
+\\192.168.10.221\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+\\192.168.10.221\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+\\192.168.10.221\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+\\192.168.10.221\seg\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.Cache
+Z:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbprojResolveAssemblyReference.cache
+Z:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+Z:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+Z:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+Z:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.Cache
+Z:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
+Z:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
+Z:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
+U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbprojResolveAssemblyReference.cache
+U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.Cache
+U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
+U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
+U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
