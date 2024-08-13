@@ -117,3 +117,16 @@ U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.Gene
 U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
 U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
 U:\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
+C:\GGC_Systems\vb.net\ggcGOCAS.dll
+C:\GGC_Systems\vb.net\ggcGOCAS.pdb
+C:\GGC_Systems\vb.net\ggcGOCAS.xml
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.AssemblyReference.cache
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Form1.resources
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.frmQuickMatch.resources
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.Resources.resources
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.GenerateResource.cache
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.CoreCompileInputs.cache
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.vbproj.CopyComplete
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.dll
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.xml
+D:\Guanzon\GMC SEG Folder\vb.net\My Applications\ggcGOCAS\obj\Debug\ggcGOCAS.pdb
